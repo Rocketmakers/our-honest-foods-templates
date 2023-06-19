@@ -1,0 +1,32 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "lib": ["es2016", "esnext.asynciterable"],
+    "target": "es6",
+    "module": "commonjs",
+    "isolatedModules": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "moduleResolution": "node",
+    "removeComments": true,
+    "sourceMap": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noLib": false,
+    "preserveConstEnums": false,
+    "suppressImplicitAnyIndexErrors": true,
+    "importHelpers": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "composite": true,
+    "noEmit": true
+  },
+  "include": ["."],
+  "exclude": ["**/node_modules/**"]
+}

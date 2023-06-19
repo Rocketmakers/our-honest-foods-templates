@@ -1,0 +1,21 @@
+{
+  "$schema": "./node_modules/@rocketmakers/orbit-template-http-repository/lib/serviceJsonSchema.json",
+  "partials": {
+    "header": {
+      "path": "partials/html/header.handlebars"
+    },
+    "footer": {
+      "path": "partials/html/footer.handlebars"
+    }
+  },
+  "layouts": {
+    "inviteUser": {
+      "path": "layouts/inviteUser",
+      "templates": ["html", "txt"]
+    },
+    "forgotPassword": {
+      "path": "layouts/forgotPassword",
+      "templates": ["html", "txt"]
+    }
+  }
+}

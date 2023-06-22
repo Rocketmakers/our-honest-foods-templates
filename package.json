@@ -1,5 +1,9 @@
 {
-  "name": "office-pantry-templates",
+  "name": "our-honest-foods-templates",
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/rocketmakers/client-template/our-honest-foods-templates"
+  },
   "scripts": {
     "gen-payload-schemas": "npx generate-schemas --serviceNames=sendgrid",
     "test-sendgrid-templates": "npx validate-templates --serviceNames=sendgrid",

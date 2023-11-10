@@ -1,3 +1,9 @@
+<h1>Sales Order #: {{salesOrder}}</h1>
+<div>Customer: {{companyName}}</div>
+<div>Site: {{siteName}}</div>
+<div>Address: {{address}}</div>
+<div>Access: {{accessNotes}}</div>
+<div>Delivery date: {{deliveryDate}}</div>
 <table>
     <thead>
         <tr>
@@ -16,3 +22,8 @@
         {{/each}}
     </tbody>
 </table>
+<div>
+    {{#each itemNotes}}
+        <div>{{this}}</div>
+    {{/each}}
+</div>

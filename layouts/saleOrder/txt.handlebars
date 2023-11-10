@@ -1,29 +1,14 @@
-<h1>Sales Order #: {{salesOrder}}</h1>
-<div>Customer: {{companyName}}</div>
-<div>Site: {{siteName}}</div>
-<div>Address: {{address}}</div>
-<div>Access: {{accessNotes}}</div>
-<div>Delivery date: {{deliveryDate}}</div>
-<table>
-    <thead>
-        <tr>
-            {{#each columns}}
-                <th>{{this}}</th>
-            {{/each}}
-        </tr>
-    </thead>
-    <tbody>
-        {{#each rows}}
-            <tr>
-                {{#each this}}
-                    <td>{{this}}</td>
-                {{/each}}
-            </tr>
-        {{/each}}
-    </tbody>
-</table>
-<div>
-    {{#each itemNotes}}
-        <div>{{this}}</div>
-    {{/each}}
-</div>
+Sales Order #: {{orderName}}
+Customer: {{accountName}}
+Site: {{siteName}}
+Address: {{address}}
+Access: {{accessNotes}}
+Delivery date: {{deliveryDate}}
+
+{{#each rows}}
+    Product: {{product}} Quantity: {{quantity}}
+{{/each}}
+
+{{#each productAssemblyNotes}}
+    {{this}}
+{{/each}}

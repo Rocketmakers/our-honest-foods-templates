@@ -151,21 +151,21 @@
   </table><table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="6d2fbec2-c98a-4f2e-aa68-16b7c8e3df2d" data-mc-module-version="2019-10-22">
     <tbody>
       <tr>
-        <td style="padding:18px 18px 18px 18px; line-height:23px; text-align:inherit;" height="100%" valign="top" bgcolor="" role="module-content"><div><h3 style="text-align: inherit"><span style="font-family: &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif; font-size: 18px; color: #000000">Sales Order </span><span style="font-family: &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif; font-size: 18px; color: #000000"><strong>#: {</strong></span><span style="line-height: 1.38; margin-top: 18pt; margin-bottom: 6pt; background-color: transparent; font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; text-decoration-line: none; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; vertical-align: baseline; white-space-collapse: preserve; text-wrap: wrap; font-family: &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif; font-size: 18px; color: #000000"><strong>ORD-12345}</strong></span></h3><div></div></div></td>
+        <td style="padding:18px 18px 18px 18px; line-height:23px; text-align:inherit;" height="100%" valign="top" bgcolor="" role="module-content"><div><h3 style="text-align: inherit"><span style="font-family: &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif; font-size: 18px; color: #000000">Sales Order </span><span style="font-family: &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif; font-size: 18px; color: #000000"><strong>#: {{orderName}}</strong></span><span style="line-height: 1.38; margin-top: 18pt; margin-bottom: 6pt; background-color: transparent; font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; text-decoration-line: none; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; vertical-align: baseline; font-family: &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif; font-size: 18px; color: #000000"><strong>}}</strong></span></h3><div></div></div></td>
       </tr>
     </tbody>
   </table><table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="1a562e4f-5771-4ba6-a652-bd6001af497c" data-mc-module-version="2019-10-22">
     <tbody>
       <tr>
-        <td style="padding:18px 18px 18px 18px; line-height:22px; text-align:inherit;" height="100%" valign="top" bgcolor="" role="module-content"><div><div style="font-family: inherit; text-align: inherit"><span style="font-family: &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif">Customer: {Rocketmakers}</span></div>
+        <td style="padding:18px 18px 18px 18px; line-height:22px; text-align:inherit;" height="100%" valign="top" bgcolor="" role="module-content"><div><div style="font-family: inherit; text-align: inherit"><span style="font-family: &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif">Customer: {{accountName}}</span></div>
 <div style="font-family: inherit; text-align: inherit"><br></div>
-<div style="font-family: inherit; text-align: inherit"><span style="font-family: &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif">Site: {Bath}</span></div>
+<div style="font-family: inherit; text-align: inherit"><span style="font-family: &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif">Site: {{siteName}}</span></div>
 <div style="font-family: inherit; text-align: inherit"><br></div>
-<div style="font-family: inherit; text-align: inherit"><span style="font-family: &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif">Address: {126 Bath Rd, &nbsp;Bath, BA1 3NA}</span></div>
+<div style="font-family: inherit; text-align: inherit"><span style="font-family: &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif">Address: {{address}}</span></div>
 <div style="font-family: inherit; text-align: inherit"><br></div>
-<div style="font-family: inherit; text-align: inherit"><span style="font-family: &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif">Access: { Please go to the site and walk in the door and say hello. Between 10:00 and 14:00 }</span></div>
+<div style="font-family: inherit; text-align: inherit"><span style="font-family: &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif">Access: {{accessNotes}}</span></div>
 <div style="font-family: inherit; text-align: inherit"><br></div>
-<div style="font-family: inherit; text-align: inherit"><span style="font-family: &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif">Delivery date: {12th October 2023}</span></div><div></div></div></td>
+<div style="font-family: inherit; text-align: inherit"><span style="font-family: &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif">Delivery date: {{deliveryDate}}</span></div><div></div></div></td>
       </tr>
     </tbody>
   </table><table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" role="module" data-type="columns" style="padding:0px 18px 0px 18px;" bgcolor="" data-distribution="1,1">
@@ -180,43 +180,13 @@
         <td style="padding:18px 0px 5px 0px; line-height:22px; text-align:inherit; background-color:#ffffff;" height="100%" valign="top" bgcolor="#ffffff" role="module-content"><div><div style="font-family: inherit; text-align: inherit"><span style="font-family: &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif"><strong>Product</strong></span></div><div></div></div></td>
       </tr>
     </tbody>
-  </table><table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="a10c4d5a-f2cd-4bd4-8a03-eba1bf8716d9.3" data-mc-module-version="2019-10-22">
+  </table>{{#each rows}}<table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="a10c4d5a-f2cd-4bd4-8a03-eba1bf8716d9.3" data-mc-module-version="2019-10-22">
     <tbody>
       <tr>
-        <td style="padding:5px 0px 5px 0px; line-height:22px; text-align:inherit;" height="100%" valign="top" bgcolor="" role="module-content"><div><div style="font-family: inherit; text-align: inherit"><span style="font-family: &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif">Seasonal Fruit Box</span></div><div></div></div></td>
+        <td style="padding:5px 0px 5px 0px; line-height:22px; text-align:inherit;" height="100%" valign="top" bgcolor="" role="module-content"><div><div style="font-family: inherit; text-align: inherit"><span style="font-family: &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif">{{product}}</span></div><div></div></div></td>
       </tr>
     </tbody>
-  </table><table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="a10c4d5a-f2cd-4bd4-8a03-eba1bf8716d9.3.7" data-mc-module-version="2019-10-22">
-    <tbody>
-      <tr>
-        <td style="padding:5px 0px 5px 0px; line-height:22px; text-align:inherit;" height="100%" valign="top" bgcolor="" role="module-content"><div><div style="font-family: inherit; text-align: inherit"><span style="font-family: &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif">Desk Friendly Fruit box</span></div><div></div></div></td>
-      </tr>
-    </tbody>
-  </table><table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="a10c4d5a-f2cd-4bd4-8a03-eba1bf8716d9.3.6" data-mc-module-version="2019-10-22">
-    <tbody>
-      <tr>
-        <td style="padding:5px 0px 5px 0px; line-height:22px; text-align:inherit;" height="100%" valign="top" bgcolor="" role="module-content"><div><div style="font-family: inherit; text-align: inherit"><span style="font-family: &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif">Seasonal Berries</span></div><div></div></div></td>
-      </tr>
-    </tbody>
-  </table><table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="a10c4d5a-f2cd-4bd4-8a03-eba1bf8716d9.3.5" data-mc-module-version="2019-10-22">
-    <tbody>
-      <tr>
-        <td style="padding:5px 0px 5px 0px; line-height:22px; text-align:inherit;" height="100%" valign="top" bgcolor="" role="module-content"><div><div style="font-family: inherit; text-align: inherit"><span style="font-family: &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif">Almond Milk 1L</span></div><div></div></div></td>
-      </tr>
-    </tbody>
-  </table><table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="a10c4d5a-f2cd-4bd4-8a03-eba1bf8716d9.3.4" data-mc-module-version="2019-10-22">
-    <tbody>
-      <tr>
-        <td style="padding:5px 0px 5px 0px; line-height:22px; text-align:inherit;" height="100%" valign="top" bgcolor="" role="module-content"><div><div style="font-family: inherit; text-align: inherit"><span style="font-family: &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif">Milk 1L</span></div><div></div></div></td>
-      </tr>
-    </tbody>
-  </table><table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="a10c4d5a-f2cd-4bd4-8a03-eba1bf8716d9.3.3" data-mc-module-version="2019-10-22">
-    <tbody>
-      <tr>
-        <td style="padding:5px 0px 5px 0px; line-height:22px; text-align:inherit;" height="100%" valign="top" bgcolor="" role="module-content"><div><div style="font-family: inherit; text-align: inherit"><span style="font-family: &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif">Bread</span></div><div></div></div></td>
-      </tr>
-    </tbody>
-  </table></td>
+  </table>{{/each}}</td>
         </tr>
       </tbody>
     </table><table width="272" style="width:272px; border-spacing:0; border-collapse:collapse; margin:0px 0px 0px 10px;" cellpadding="0" cellspacing="0" align="left" border="0" bgcolor="" class="column column-1">
@@ -228,43 +198,14 @@
         <td style="padding:18px 0px 5px 0px; line-height:22px; text-align:inherit;" height="100%" valign="top" bgcolor="" role="module-content"><div><div style="font-family: inherit; text-align: inherit"><span style="font-family: &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif"><strong>Quantity</strong></span></div><div></div></div></td>
       </tr>
     </tbody>
-  </table><table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="a10c4d5a-f2cd-4bd4-8a03-eba1bf8716d9.3.1" data-mc-module-version="2019-10-22">
+  </table>{{#each rows}}<table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="a10c4d5a-f2cd-4bd4-8a03-eba1bf8716d9.3.1" data-mc-module-version="2019-10-22">
     <tbody>
       <tr>
-        <td style="padding:5px 0px 5px 0px; line-height:22px; text-align:inherit;" height="100%" valign="top" bgcolor="" role="module-content"><div><div style="font-family: inherit; text-align: inherit"><span style="font-family: &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif">3</span></div><div></div></div></td>
+        <td style="padding:5px 0px 5px 0px; line-height:22px; text-align:inherit;" height="100%" valign="top" bgcolor="" role="module-content"><div><div style="font-family: inherit; text-align: inherit"><span style="font-family: &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif">{{quantity}}</span></div><div></div></div></td>
       </tr>
     </tbody>
-  </table><table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="a10c4d5a-f2cd-4bd4-8a03-eba1bf8716d9.3.1.6" data-mc-module-version="2019-10-22">
-    <tbody>
-      <tr>
-        <td style="padding:5px 0px 5px 0px; line-height:22px; text-align:inherit;" height="100%" valign="top" bgcolor="" role="module-content"><div><div style="font-family: inherit; text-align: inherit"><span style="font-family: &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif">10</span></div><div></div></div></td>
-      </tr>
-    </tbody>
-  </table><table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="a10c4d5a-f2cd-4bd4-8a03-eba1bf8716d9.3.1.5" data-mc-module-version="2019-10-22">
-    <tbody>
-      <tr>
-        <td style="padding:5px 0px 5px 0px; line-height:22px; text-align:inherit;" height="100%" valign="top" bgcolor="" role="module-content"><div><div style="font-family: inherit; text-align: inherit"><span style="font-family: &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif">10</span></div><div></div></div></td>
-      </tr>
-    </tbody>
-  </table><table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="a10c4d5a-f2cd-4bd4-8a03-eba1bf8716d9.3.1.4" data-mc-module-version="2019-10-22">
-    <tbody>
-      <tr>
-        <td style="padding:5px 0px 5px 0px; line-height:22px; text-align:inherit;" height="100%" valign="top" bgcolor="" role="module-content"><div><div style="font-family: inherit; text-align: inherit"><span style="font-family: &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif">10</span></div><div></div></div></td>
-      </tr>
-    </tbody>
-  </table><table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="a10c4d5a-f2cd-4bd4-8a03-eba1bf8716d9.3.1.3" data-mc-module-version="2019-10-22">
-    <tbody>
-      <tr>
-        <td style="padding:5px 0px 5px 0px; line-height:22px; text-align:inherit;" height="100%" valign="top" bgcolor="" role="module-content"><div><div style="font-family: inherit; text-align: inherit"><span style="font-family: &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif">2</span></div><div></div></div></td>
-      </tr>
-    </tbody>
-  </table><table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="a10c4d5a-f2cd-4bd4-8a03-eba1bf8716d9.3.1.2" data-mc-module-version="2019-10-22">
-    <tbody>
-      <tr>
-        <td style="padding:5px 0px 5px 0px; line-height:22px; text-align:inherit;" height="100%" valign="top" bgcolor="" role="module-content"><div><div style="font-family: inherit; text-align: inherit"><span style="font-family: &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif">2</span></div><div></div></div></td>
-      </tr>
-    </tbody>
-  </table></td>
+  </table>{{/each}}
+  </td>
         </tr>
       </tbody>
     </table></td>
@@ -274,13 +215,11 @@
     <tbody>
       <tr>
         <td style="padding:18px 18px 18px 18px; line-height:22px; text-align:inherit;" height="100%" valign="top" bgcolor="" role="module-content"><div><div style="font-family: inherit; text-align: inherit"><span style="font-family: &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif; font-size: 12px"><br>
-Each Seasonal Fruit Box should contain: 5 Green Apples, 3 Oranges, 2 Bananas<br>
-<br>
-Each Desk Friendly Fruit Box should contain: 10 Green Apples, 3 Oranges, 2 Bananas</span><span style="font-family: &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif"><br>
+{{productAssemblyNotes}}</span><span style="font-family: &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif"><br>
 </span></div><div></div></div></td>
       </tr>
     </tbody>
-  </table><div data-role="module-unsubscribe" class="module" role="module" data-type="unsubscribe" style="color:#444444; font-size:12px; line-height:20px; padding:16px 16px 16px 16px; text-align:Center;" data-muid="4e838cf3-9892-4a6d-94d6-170e474d21e5"><div class="Unsubscribe--addressLine"><p class="Unsubscribe--senderName" style="font-size:12px; line-height:20px;">{{Sender_Name}}</p><p style="font-size:12px; line-height:20px;"><span class="Unsubscribe--senderAddress">{{Sender_Address}}</span>, <span class="Unsubscribe--senderCity">{{Sender_City}}</span>, <span class="Unsubscribe--senderState">{{Sender_State}}</span> <span class="Unsubscribe--senderZip">{{Sender_Zip}}</span></p></div><p style="font-size:12px; line-height:20px;"><a class="Unsubscribe--unsubscribeLink" href="{{{unsubscribe}}}" target="_blank" style="">Unsubscribe</a> - <a href="{{{unsubscribe_preferences}}}" target="_blank" class="Unsubscribe--unsubscribePreferences" style="">Unsubscribe Preferences</a></p></div></td>
+  </table></td>
                                       </tr>
                                     </table>
                                     <!--[if mso]>

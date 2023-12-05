@@ -1,66 +1,17 @@
+include:
+  - .gitlab/ci/**.yml
+
 stages:
   - analyse
   - notify
 
-.base:
+.defaults:
+  tags:
+    - ohf
   image: rocketmakers/ci-build-node-gcp:3.7.0
   before_script:
     - make install
   retry:
     max: 2
     when: runner_system_failure
-  tags:
-    - ohf
-
-.base_rules:
-  rules:
-    - if: $MERGE_REQUEST_REMINDER != "true"
-
-analyse:format-check:
-  extends:
-    - .base
-    - .base_rules
-  stage: analyse
-  script:
-    - make format-check
-
-analyse:lint:
-  extends:
-    - .base
-    - .base_rules
-  stage: analyse
-  script:
-    - make lint
-
-test:sendgrid:
-  extends:
-    - .base
-    - .base_rules
-  stage: analyse
-  script:
-    - make generate-payload-schemas SERVICE=sendgrid
-    - make test-templates SERVICE=sendgrid
-    - git diff --exit-code
-
-# -- Notify ------------------------------------------------
-
-.notify:merge_request_reminder:
-  extends:
-    - .base
-  stage: notify
-  image: bottlecapdave/gitlab-merge-request-reminder:1.4.0
-  variables:
-    SLACK_WEBHOOK_URL: $SLACK_WEBHOOK_URL_OUR_HONEST_FOODS
-    GITLAB_ACCESS_TOKEN: $GITLAB_ACCESS_TOKEN_MERGE_REQUEST_REMINDERS
-    GITLAB_PROJECT_IDS: $CI_PROJECT_ID
-    INCLUDE_WIP: 'false'
-    INCLUDE_DRAFT: 'false'
-    SLACK_TARGET: ':eyes:'
-  retry:
-    max: 2
-    when: runner_system_failure
-  before_script: []
-  script:
-    - node /app/lib/index.js
-  rules:
-    - if: $MERGE_REQUEST_REMINDER == "true"
+  interruptible: true

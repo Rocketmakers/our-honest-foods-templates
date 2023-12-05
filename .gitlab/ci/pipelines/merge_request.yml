@@ -1,0 +1,24 @@
+# -- Rules --------------------------------------------------------------------
+
+.merge_request_rules:
+  rules:
+    - if: $MERGE_REQUEST_REMINDER == "true"
+      when: never
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+
+# -- Analyse ------------------------------------------------------------------
+
+merge_request:analyse:format-check:
+  extends:
+    - .analyse:format-check
+    - .merge_request_rules
+
+merge_request:analyse:lint:
+  extends:
+    - .analyse:lint
+    - .merge_request_rules
+
+merge_request:test:sendgrid:
+  extends:
+    - .test:sendgrid
+    - .merge_request_rules

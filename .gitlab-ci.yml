@@ -1,5 +1,6 @@
 stages:
   - analyse
+  - notify
 
 .base:
   image: rocketmakers/ci-build-node-gcp:3.7.0
@@ -11,9 +12,15 @@ stages:
   tags:
     - ohf
 
+.base_rules:
+  rules:
+    - if: $MERGE_REQUEST_REMINDER != "true"
+      when: on_success
+
 analyse:format-check:
   extends:
     - .base
+    - .base_rules
   stage: analyse
   script:
     - make format-check
@@ -21,6 +28,7 @@ analyse:format-check:
 analyse:lint:
   extends:
     - .base
+    - .base_rules
   stage: analyse
   script:
     - make lint
@@ -28,6 +36,7 @@ analyse:lint:
 test:sendgrid:
   extends:
     - .base
+    - .base_rules
   stage: analyse
   script:
     - make generate-payload-schemas SERVICE=sendgrid
@@ -54,3 +63,8 @@ test:sendgrid:
   before_script: []
   script:
     - node /app/lib/index.js
+  rules:
+    # Current bug in gitlab rules will duplicate pipelines for open MRs
+    - if: $CI_MERGE_REQUEST_EVENT_TYPE == "detached"
+      when: never
+    - if: $MERGE_REQUEST_REMINDER == "true"

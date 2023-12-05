@@ -9,14 +9,6 @@
     }
   },
   "layouts": {
-    "inviteUser": {
-      "path": "layouts/inviteUser",
-      "templates": ["html", "txt"]
-    },
-    "forgotPassword": {
-      "path": "layouts/forgotPassword",
-      "templates": ["html", "txt"]
-    },
     "saleOrder": {
       "path": "layouts/saleOrder",
       "templates": ["html", "txt"]

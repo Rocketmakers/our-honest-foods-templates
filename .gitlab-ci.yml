@@ -15,7 +15,6 @@ stages:
 .base_rules:
   rules:
     - if: $MERGE_REQUEST_REMINDER != "true"
-      when: on_success
 
 analyse:format-check:
   extends:
@@ -64,7 +63,4 @@ test:sendgrid:
   script:
     - node /app/lib/index.js
   rules:
-    # Current bug in gitlab rules will duplicate pipelines for open MRs
-    - if: $CI_MERGE_REQUEST_EVENT_TYPE == "detached"
-      when: never
     - if: $MERGE_REQUEST_REMINDER == "true"

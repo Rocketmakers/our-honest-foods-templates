@@ -1,36 +1,17 @@
+include:
+  - .gitlab/ci/**.yml
+
 stages:
   - analyse
+  - notify
 
-.base:
+.defaults:
+  tags:
+    - ohf
   image: rocketmakers/ci-build-node-gcp:3.7.0
   before_script:
     - make install
   retry:
     max: 2
     when: runner_system_failure
-  tags:
-    # Can't access group runner, so this is a stop gap.
-    - rocketmakers-internal-dind
-
-analyse:format-check:
-  extends:
-    - .base
-  stage: analyse
-  script:
-    - make format-check
-
-analyse:lint:
-  extends:
-    - .base
-  stage: analyse
-  script:
-    - make lint
-
-test:sendgrid:
-  extends:
-    - .base
-  stage: analyse
-  script:
-    - make generate-payload-schemas SERVICE=sendgrid
-    - make test-templates SERVICE=sendgrid
-    - git diff --exit-code
+  interruptible: true

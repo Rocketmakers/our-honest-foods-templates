@@ -1,0 +1,43 @@
+.analyse:format-check:
+  extends:
+    - .defaults
+  stage: analyse
+  script:
+    - make format-check
+
+.analyse:lint:
+  extends:
+    - .defaults
+  stage: analyse
+  script:
+    - make lint
+
+.test:sendgrid:
+  extends:
+    - .defaults
+  stage: analyse
+  script:
+    - make generate-payload-schemas SERVICE=sendgrid
+    - make test-templates SERVICE=sendgrid
+    - git diff --exit-code
+
+# -- Notify ------------------------------------------------
+
+.notify:merge_request_reminder:
+  extends:
+    - .defaults
+  stage: notify
+  image: bottlecapdave/gitlab-merge-request-reminder:1.4.0
+  variables:
+    SLACK_WEBHOOK_URL: $SLACK_WEBHOOK_URL_OUR_HONEST_FOODS
+    GITLAB_ACCESS_TOKEN: $GITLAB_ACCESS_TOKEN_MERGE_REQUEST_REMINDERS
+    GITLAB_PROJECT_IDS: $CI_PROJECT_ID
+    INCLUDE_WIP: 'false'
+    INCLUDE_DRAFT: 'false'
+    SLACK_TARGET: ':eyes:'
+  retry:
+    max: 2
+    when: runner_system_failure
+  before_script: []
+  script:
+    - node /app/lib/index.js

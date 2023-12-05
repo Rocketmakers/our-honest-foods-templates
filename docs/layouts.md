@@ -45,9 +45,9 @@ export interface IModel {
 
 export const sampleData: IModel[] = [
   {
-    name: 'tim',
-    username: 'tim@rocketmakers.com',
-    requestDateTime: 'Valid date time',
+    name: "tim",
+    username: "tim@rocketmakers.com",
+    requestDateTime: "Valid date time",
   },
 ];
 ```

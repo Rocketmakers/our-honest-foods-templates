@@ -1,0 +1,17 @@
+include:
+  - .gitlab/ci/**.yml
+
+stages:
+  - analyse
+  - notify
+
+.defaults:
+  tags:
+    - ohf
+  image: rocketmakers/ci-build-node-gcp:3.7.0
+  before_script:
+    - make install
+  retry:
+    max: 2
+    when: runner_system_failure
+  interruptible: true

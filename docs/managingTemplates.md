@@ -2,9 +2,13 @@
 
 When managing templates it is important to follow the guidance below to ensure no problems are experienced when sending notifications in production.
 
-## Branching strategy
-
-In this repo notification templates are pulled from the `production` branch. Any changes to template (whether creating, updating or deleting) should take place on a separate branch and create a merge request to be reviewed by another developer/team member.
+- [Managing templates](#managing-templates)
+  - [Access](#access)
+  - [Generating payload schemas](#generating-payload-schemas)
+  - [Testing templates](#testing-templates)
+  - [Viewing a compiled template](#viewing-a-compiled-template)
+  - [Creating/updating a template](#creatingupdating-a-template)
+  - [Branching \& environments](#branching--environments)
 
 ## Access
 
@@ -17,7 +21,8 @@ Members of this git repository can be granted varying levels of access, to updat
 Payload json schemas can be generated for all layouts within this directory by running:
 
 ```bash
-npm run generate-payload-schemas
+# make generate-payload-schemas SERVICE=sendgrid
+make generate-payload-schemas SERVICE={{serviceName}}
 ```
 
 This will generate a `payloadSchema.json` file within your layout template directory, which will be used to validate payloads when sending notifications.
@@ -27,7 +32,8 @@ This will generate a `payloadSchema.json` file within your layout template direc
 You can test sendgrid templates within this repository by running the following:
 
 ```bash
-npm run test-sendgrid-templates
+# make test-templates SERVICE=sendgrid
+make test-templates SERVICE={{serviceName}}
 ```
 
 This will look in your `sendgrid.json` file and make sure all registered layouts compile successfully with the provided partials and sample data.
@@ -37,7 +43,8 @@ This will look in your `sendgrid.json` file and make sure all registered layouts
 Run the following script to compile out each layout to the `compiledLayouts` dir. The script uses test data from your `model.ts` and allows you to visualise the end product for a notification.
 
 ```bash
-npm run compile-layouts -- -s=<serviceName>
+# make compile-layouts SERVICE=sendgrid
+make compile-layouts SERVICE={{serviceName}}
 ```
 
 ## Creating/updating a template
@@ -48,24 +55,19 @@ _Whenever any change to this template repository are made you should run both of
 
 ```bash
 # Ensure schemas generate successfully and are up to date
-npm run gen-payload-schemas
+make generate-payload-schemas SERVICE={{serviceName}}
 
 # Test example payload data against defined templates
-npm run test-sendgrid-templates
+make test-templates SERVICE={{serviceName}}
 ```
 
 This will make sure any potentially breaking/incorrect changes to notifications are not merged into `production`.
 
-## Deploying changes/updates to notification templates
-
-When changes are made to this template repository there is no need to re-deploy your API/application. You can call the endpoint below to reload the notification template cache within the deployed api. From then on all notifications will be sent using the newly updated templates.
-
-```bash
-# POST request to: {{ProjectAPI}}/templates/update
-```
-
 ## Branching & environments
 
-Currently there are two branches active for this repository: `production` and `test`. The project source code repository targets those branches in the deployed production and local dev environments respectively. This means that any changes to the `test` branch can be manually checked using a locally deployed version of the project API. Once those checks are complete the `test` branch can be merged back into `production`.
+To support our development workflow, there are the following branches which correspond to the equivalent environments. If you want to test on a branch then you can update your local config to point to a feature branch on this repository.
 
-Although there are not currently any CI jobs running on creation of a merge request or access controls setup for who can create/merge branches in this repository, these are both configurable features within this type of git managed template repository.
+- `local`
+- `staging`
+- `prod`
+

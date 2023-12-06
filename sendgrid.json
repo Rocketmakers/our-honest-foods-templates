@@ -6,11 +6,14 @@
     },
     "footer": {
       "path": "partials/html/footer.handlebars"
+    },
+    "order": {
+      "path": "partials/html/order.handlebars"
     }
   },
   "layouts": {
-    "saleOrder": {
-      "path": "layouts/saleOrder",
+    "partnerOrders": {
+      "path": "layouts/partnerOrders",
       "templates": ["html", "txt"]
     }
   }

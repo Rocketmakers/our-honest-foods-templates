@@ -14,7 +14,7 @@ When managing templates it is important to follow the guidance below to ensure n
 
 <!-- TODO: Replace below url in link with project git repo url -->
 
-Members of this git repository can be granted varying levels of access, to update templates and approve merge requests, in the [project settings](Update with project template git repo url).
+Members of this git repository can be granted varying levels of access, to update templates and approve merge requests, in the [project settings](https://gitlab.com/rocketmakers/client-template/our-honest-foods-templates/-/project_members).
 
 ## Generating payload schemas
 
@@ -61,7 +61,7 @@ make generate-payload-schemas SERVICE={{serviceName}}
 make test-templates SERVICE={{serviceName}}
 ```
 
-This will make sure any potentially breaking/incorrect changes to notifications are not merged into `production`.
+This will make sure any potentially breaking/incorrect changes to notifications are not merged into `prod`.
 
 ## Branching & environments
 

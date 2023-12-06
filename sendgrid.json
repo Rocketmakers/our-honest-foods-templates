@@ -9,5 +9,9 @@
     }
   },
   "layouts": {
+    "example": {
+      "path": "layouts/example",
+      "templates": ["html", "txt"]
+    }
   }
 }

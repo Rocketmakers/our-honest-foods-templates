@@ -5,40 +5,40 @@
  */
 
 interface IPartnerOrder {
-  orderName: string;
-  accountName: string;
-  siteName: string;
-  address: string;
-  accessNotes: string;
-  deliveryDate: string;
-  rows: {
-    product: string;
-    quantity: string;
+  OrderName: string;
+  AccountName: string;
+  SiteName: string;
+  Address: string;
+  AccessNotes: string;
+  DeliveryDate: string;
+  Rows: {
+    Product: string;
+    Quantity: string;
   }[];
-  productAssemblyNotes: string[];
+  ProductAssemblyNotes: string[];
 }
 export interface IModel {
-  partnerName: string;
-  orders: IPartnerOrder[];
+  PartnerName: string;
+  Orders: IPartnerOrder[];
 }
 
 export const sampleData: IModel[] = [
   {
-    partnerName: "Total Produce",
-    orders: [
+    PartnerName: "Total Produce",
+    Orders: [
       {
-        orderName: "ORD-123456",
-        accountName: "Example Customer",
-        siteName: "Site A",
-        address: "123 Main Street",
-        accessNotes: "Go round the back and knock on the door",
-        deliveryDate: "2023-11-10",
-        rows: [
-          { product: "Product A", quantity: "5" },
-          { product: "Product B", quantity: "2" },
-          { product: "Product C", quantity: "3" },
+        OrderName: "ORD-123456",
+        AccountName: "Example Customer",
+        SiteName: "Site A",
+        Address: "123 Main Street",
+        AccessNotes: "Go round the back and knock on the door",
+        DeliveryDate: "2023-11-10",
+        Rows: [
+          { Product: "Product A", Quantity: "5" },
+          { Product: "Product B", Quantity: "2" },
+          { Product: "Product C", Quantity: "3" },
         ],
-        productAssemblyNotes: [
+        ProductAssemblyNotes: [
           "This is a note for product A",
           "This is a note for product B",
           "This is a note for product C",

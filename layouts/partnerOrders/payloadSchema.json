@@ -1,1 +1,76 @@
-{"description":"Specify required object","examples":[{"orderName":"ORD-123456","accountName":"Example Customer","siteName":"Site A","address":"123 Main Street","accessNotes":"Go round the back and knock on the door","deliveryDate":"2023-11-10","rows":[{"product":"Product A","quantity":"5"},{"product":"Product B","quantity":"2"},{"product":"Product C","quantity":"3"}],"productAssemblyNotes":["This is a note for product A","This is a note for product B","This is a note for product C"]}],"type":"object","properties":{"orderName":{"type":"string"},"accountName":{"type":"string"},"siteName":{"type":"string"},"address":{"type":"string"},"accessNotes":{"type":"string"},"deliveryDate":{"type":"string"},"rows":{"type":"array","items":{"type":"object","properties":{"product":{"type":"string"},"quantity":{"type":"string"}},"required":["product","quantity"]}},"productAssemblyNotes":{"type":"array","items":{"type":"string"}}},"required":["accessNotes","accountName","address","deliveryDate","orderName","productAssemblyNotes","rows","siteName"],"$schema":"http://json-schema.org/draft-07/schema#"}
+{
+  "type": "object",
+  "properties": {
+    "PartnerName": { "type": "string" },
+    "Orders": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/IPartnerOrder" }
+    }
+  },
+  "required": ["Orders", "PartnerName"],
+  "definitions": {
+    "IPartnerOrder": {
+      "description": "Specify required object",
+      "examples": [
+        {
+          "PartnerName": "Total Produce",
+          "Orders": [
+            {
+              "OrderName": "ORD-123456",
+              "AccountName": "Example Customer",
+              "SiteName": "Site A",
+              "Address": "123 Main Street",
+              "AccessNotes": "Go round the back and knock on the door",
+              "DeliveryDate": "2023-11-10",
+              "Rows": [
+                { "Product": "Product A", "Quantity": "5" },
+                { "Product": "Product B", "Quantity": "2" },
+                { "Product": "Product C", "Quantity": "3" }
+              ],
+              "ProductAssemblyNotes": [
+                "This is a note for product A",
+                "This is a note for product B",
+                "This is a note for product C"
+              ]
+            }
+          ]
+        }
+      ],
+      "type": "object",
+      "properties": {
+        "OrderName": { "type": "string" },
+        "AccountName": { "type": "string" },
+        "SiteName": { "type": "string" },
+        "Address": { "type": "string" },
+        "AccessNotes": { "type": "string" },
+        "DeliveryDate": { "type": "string" },
+        "Rows": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "Product": { "type": "string" },
+              "Quantity": { "type": "string" }
+            },
+            "required": ["Product", "Quantity"]
+          }
+        },
+        "ProductAssemblyNotes": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": [
+        "AccessNotes",
+        "AccountName",
+        "Address",
+        "DeliveryDate",
+        "OrderName",
+        "ProductAssemblyNotes",
+        "Rows",
+        "SiteName"
+      ]
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

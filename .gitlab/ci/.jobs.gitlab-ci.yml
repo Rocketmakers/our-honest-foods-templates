@@ -32,9 +32,9 @@
     SLACK_WEBHOOK_URL: $SLACK_WEBHOOK_URL_OUR_HONEST_FOODS
     GITLAB_ACCESS_TOKEN: $GITLAB_ACCESS_TOKEN_MERGE_REQUEST_REMINDERS
     GITLAB_PROJECT_IDS: $CI_PROJECT_ID
-    INCLUDE_WIP: 'false'
-    INCLUDE_DRAFT: 'false'
-    SLACK_TARGET: ':eyes:'
+    INCLUDE_WIP: "false"
+    INCLUDE_DRAFT: "false"
+    SLACK_TARGET: ":eyes:"
   retry:
     max: 2
     when: runner_system_failure

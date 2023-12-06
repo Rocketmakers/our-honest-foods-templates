@@ -70,4 +70,3 @@ To support our development workflow, there are the following branches which corr
 - `local`
 - `staging`
 - `prod`
-

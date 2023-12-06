@@ -1,0 +1,16 @@
+# -- Rules ------------------------------------------------
+
+.merge_request_reminder_rules:
+  rules:
+    # Current bug in gitlab rules will duplicate pipelines for open MRs
+    - if: $CI_MERGE_REQUEST_EVENT_TYPE == "detached"
+      when: never
+    - if: $MERGE_REQUEST_REMINDER == "true"
+
+# -- Merge request reminder -------------------------------
+
+notify:merge_request_reminder:
+  extends:
+    - .notify:merge_request_reminder
+    - .merge_request_reminder_rules
+  needs: []

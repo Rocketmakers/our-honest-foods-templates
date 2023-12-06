@@ -4,22 +4,21 @@
  * @examples require(".").sampleData
  */
 
-interface IPartnerOrder {
-  OrderName: string;
-  AccountName: string;
-  SiteName: string;
-  Address: string;
-  AccessNotes: string;
-  DeliveryDate: string;
-  Rows: {
-    Product: string;
-    Quantity: string;
-  }[];
-  ProductAssemblyNotes: string[];
-}
 export interface IModel {
   PartnerName: string;
-  Orders: IPartnerOrder[];
+  Orders: {
+    OrderName: string;
+    AccountName: string;
+    SiteName: string;
+    Address: string;
+    AccessNotes: string;
+    DeliveryDate: string;
+    Rows: {
+      Product: string;
+      Quantity: string;
+    }[];
+    ProductAssemblyNotes: string[];
+  }[];
 }
 
 export const sampleData: IModel[] = [

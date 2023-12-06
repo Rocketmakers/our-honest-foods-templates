@@ -11,7 +11,7 @@
           "Address": "123 Main Street",
           "AccessNotes": "Go round the back and knock on the door",
           "DeliveryDate": "2023-11-10",
-          "Rows": [
+          "LineItems": [
             { "Product": "Product A", "Quantity": "5" },
             { "Product": "Product B", "Quantity": "2" },
             { "Product": "Product C", "Quantity": "3" }
@@ -39,7 +39,7 @@
           "Address": { "type": "string" },
           "AccessNotes": { "type": "string" },
           "DeliveryDate": { "type": "string" },
-          "Rows": {
+          "LineItems": {
             "type": "array",
             "items": {
               "type": "object",
@@ -60,9 +60,9 @@
           "AccountName",
           "Address",
           "DeliveryDate",
+          "LineItems",
           "OrderName",
           "ProductAssemblyNotes",
-          "Rows",
           "SiteName"
         ]
       }

@@ -13,7 +13,7 @@ export interface IModel {
     Address: string;
     AccessNotes: string;
     DeliveryDate: string;
-    Rows: {
+    LineItems: {
       Product: string;
       Quantity: string;
     }[];
@@ -32,7 +32,7 @@ export const sampleData: IModel[] = [
         Address: "123 Main Street",
         AccessNotes: "Go round the back and knock on the door",
         DeliveryDate: "2023-11-10",
-        Rows: [
+        LineItems: [
           { Product: "Product A", Quantity: "5" },
           { Product: "Product B", Quantity: "2" },
           { Product: "Product C", Quantity: "3" },

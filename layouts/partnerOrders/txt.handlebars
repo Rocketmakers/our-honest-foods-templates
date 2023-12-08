@@ -1,0 +1,22 @@
+Hello {{PartnerName}},
+Can you please send out the following Orders:
+
+{{#each Orders}}
+    Sales Order #: {{OrderName}}
+    Customer: {{AccountName}}
+    Site: {{SiteName}}
+    Address: {{Address}}
+    Access: {{AccessNotes}}
+    Delivery date: {{DeliveryDate}}
+
+    {{#each LineItems}}
+        Product: {{Product}} Quantity: {{Quantity}}
+    {{/each}}
+
+    {{#each ProductAssemblyNotes}}
+        {{this}}
+    {{/each}}
+ 
+----------------------------------------------------------------------------------------
+ 
+{{/each}}

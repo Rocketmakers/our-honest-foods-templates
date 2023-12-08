@@ -6,15 +6,14 @@
     },
     "footer": {
       "path": "partials/html/footer.handlebars"
+    },
+    "order": {
+      "path": "partials/html/order.handlebars"
     }
   },
   "layouts": {
-    "inviteUser": {
-      "path": "layouts/inviteUser",
-      "templates": ["html", "txt"]
-    },
-    "forgotPassword": {
-      "path": "layouts/forgotPassword",
+    "partnerOrders": {
+      "path": "layouts/partnerOrders",
       "templates": ["html", "txt"]
     }
   }

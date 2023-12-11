@@ -2,7 +2,7 @@
   "description": "Specify required object",
   "examples": [
     {
-      "IsPreview": true,
+      "SendAsPreview": false,
       "PartnerName": "Total Produce",
       "HubName": "Cornwall",
       "FromDate": "6th Dec",
@@ -47,7 +47,7 @@
       ]
     },
     {
-      "IsPreview": false,
+      "SendAsPreview": true,
       "PartnerName": "Another Partner",
       "HubName": "Bristol",
       "FromDate": "6th Dec",
@@ -94,7 +94,7 @@
   ],
   "type": "object",
   "properties": {
-    "IsPreview": { "type": "boolean" },
+    "SendAsPreview": { "type": "boolean" },
     "PartnerName": { "type": "string" },
     "HubName": { "type": "string" },
     "FromDate": { "type": "string" },
@@ -142,9 +142,9 @@
   "required": [
     "FromDate",
     "HubName",
-    "IsPreview",
     "Orders",
     "PartnerName",
+    "SendAsPreview",
     "ToDate"
   ],
   "$schema": "http://json-schema.org/draft-07/schema#"

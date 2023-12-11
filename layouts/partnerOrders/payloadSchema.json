@@ -3,6 +3,9 @@
   "examples": [
     {
       "PartnerName": "Total Produce",
+      "HubName": "Cornwall",
+      "FromDate": "6th Dec",
+      "ToDate": "16th Dec",
       "Orders": [
         {
           "OrderName": "ORD-123456",
@@ -46,6 +49,9 @@
   "type": "object",
   "properties": {
     "PartnerName": { "type": "string" },
+    "HubName": { "type": "string" },
+    "FromDate": { "type": "string" },
+    "ToDate": { "type": "string" },
     "Orders": {
       "type": "array",
       "items": {
@@ -86,6 +92,6 @@
       }
     }
   },
-  "required": ["Orders", "PartnerName"],
+  "required": ["FromDate", "HubName", "Orders", "PartnerName", "ToDate"],
   "$schema": "http://json-schema.org/draft-07/schema#"
 }

@@ -14,7 +14,7 @@
   "layouts": {
     "partnerOrders": {
       "path": "layouts/partnerOrders",
-      "templates": ["html", "txt"]
+      "templates": ["html", "txt", "subject"]
     }
   }
 }

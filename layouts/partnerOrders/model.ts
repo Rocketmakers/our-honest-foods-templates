@@ -6,6 +6,9 @@
 
 export interface IModel {
   PartnerName: string;
+  HubName: string;
+  FromDate: string;
+  ToDate: string;
   Orders: {
     OrderName: string;
     AccountName: string;
@@ -24,6 +27,9 @@ export interface IModel {
 export const sampleData: IModel[] = [
   {
     PartnerName: "Total Produce",
+    HubName: "Cornwall",
+    FromDate: "6th Dec",
+    ToDate: "16th Dec",
     Orders: [
       {
         OrderName: "ORD-123456",

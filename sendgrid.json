@@ -3,6 +3,9 @@
   "partials": {
     "order": {
       "path": "partials/html/order.handlebars"
+    },
+    "footer": {
+      "path": "partials/html/footer.handlebars"
     }
   },
   "layouts": {

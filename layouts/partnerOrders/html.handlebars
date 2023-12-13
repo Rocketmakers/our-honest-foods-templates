@@ -24,8 +24,8 @@
 <![endif]-->
       <style type="text/css">
     body, p, div {
-      font-family: lucida sans unicode,lucida grande,sans-serif;
-      font-size: 14px;
+      font-family: Arial, sans-serif;      
+      font-size: 13px;
     }
     body {
       color: #000000;
@@ -117,7 +117,7 @@
       <!--user entered Head Start--><!--End Head user entered-->
     </head>
     <body>
-      <center class="wrapper" data-link-color="#1188E6" data-body-style="font-size:14px; font-family:lucida sans unicode,lucida grande,sans-serif; color:#000000; background-color:#FFFFFF;">
+      <center class="wrapper" data-link-color="#1188E6" data-body-style="font-size:14px; font-family: Arial, sans-serif; color:#000000; background-color:#FFFFFF;">
         <div class="webkit">
           <table cellpadding="0" cellspacing="0" border="0" width="100%" class="wrapper" bgcolor="#FFFFFF">
             <tr>
@@ -155,7 +155,7 @@
                                               <td style="padding:18px 18px 18px 18px; line-height:22px; text-align:inherit;" height="100%" valign="top" bgcolor="" role="module-content">
                                                 <div>
                                                   <div style="font-family: inherit; text-align: inherit">
-                                                    <span style="font-family: &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif">
+                                                    <span style="font-family: &quot;Arial&quot;, sans-serif">
                                                       Hello {{PartnerName}},
                                                     </span>
                                                   </div>
@@ -163,8 +163,8 @@
                                                       <br>
                                                   </div>
                                                   <div style="font-family: inherit; text-align: inherit">
-                                                      <span style="font-family: &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif">
-                                                          Can you please send out the following Orders:
+                                                      <span style="font-family: &quot;Arial&quot;, sans-serif">
+                                                          Can you please send out the following orders:
                                                       </span>
                                                   </div>
                                                   <div style="font-family: inherit; text-align: inherit">
@@ -180,6 +180,7 @@
                                         {{#each Orders}}
                                           {{> order}}
                                         {{/each}}
+                                        {{> footer}}
                                         </td>
                                       </tr>
                                     </table>

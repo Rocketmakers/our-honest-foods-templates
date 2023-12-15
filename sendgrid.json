@@ -1,20 +1,17 @@
 {
   "$schema": "./node_modules/@rocketmakers/orbit-template-http-repository/lib/serviceJsonSchema.json",
   "partials": {
-    "header": {
-      "path": "partials/html/header.handlebars"
+    "order": {
+      "path": "partials/html/order.handlebars"
     },
     "footer": {
       "path": "partials/html/footer.handlebars"
-    },
-    "order": {
-      "path": "partials/html/order.handlebars"
     }
   },
   "layouts": {
     "partnerOrders": {
       "path": "layouts/partnerOrders",
-      "templates": ["html", "txt"]
+      "templates": ["html", "txt", "subject"]
     }
   }
 }

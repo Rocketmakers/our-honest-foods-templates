@@ -14,6 +14,7 @@
           "SiteName": "Site A",
           "Address": "123 Main Street",
           "AccessNotes": "Go round the back and knock on the door",
+          "SiteAccessTimes": "09:00 - 17:00",
           "DeliveryDate": "2023-11-10",
           "LineItems": [
             { "Product": "Product A", "Quantity": "5" },
@@ -33,6 +34,7 @@
           "Address": "123 Main Street",
           "AccessNotes": "Go round the back and knock on the door",
           "DeliveryDate": "2023-11-10",
+          "SiteAccessTimes": null,
           "LineItems": [
             { "Product": "Product A", "Quantity": "5" },
             { "Product": "Product B", "Quantity": "2" },
@@ -59,6 +61,7 @@
           "SiteName": "Site Z",
           "Address": "123 Main Street",
           "AccessNotes": "Go round the back and knock on the door",
+          "SiteAccessTimes": "08:00 - 16:00",
           "DeliveryDate": "2023-11-10",
           "LineItems": [
             { "Product": "Product A", "Quantity": "5" },
@@ -78,6 +81,7 @@
           "Address": "123 Main Street",
           "AccessNotes": "Go round the back and knock on the door",
           "DeliveryDate": "2023-11-10",
+          "SiteAccessTimes": null,
           "LineItems": [
             { "Product": "Product A", "Quantity": "5" },
             { "Product": "Product B", "Quantity": "2" },
@@ -110,6 +114,7 @@
           "Address": { "type": "string" },
           "AccessNotes": { "type": "string" },
           "DeliveryDate": { "type": "string" },
+          "SiteAccessTimes": { "type": ["string", "null"] },
           "LineItems": {
             "type": "array",
             "items": {

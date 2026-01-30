@@ -17,6 +17,7 @@ export interface IModel {
     Address: string;
     AccessNotes: string;
     DeliveryDate: string;
+    SiteAccessTimes: string | null;
     LineItems: {
       Product: string;
       Quantity: string;
@@ -40,6 +41,7 @@ export const sampleData: IModel[] = [
         Address: "123 Main Street",
         AccessNotes: "Go round the back and knock on the door",
         DeliveryDate: "2023-11-10",
+        SiteAccessTimes: "09:00 - 17:00",
         LineItems: [
           { Product: "Product A", Quantity: "5" },
           { Product: "Product B", Quantity: "2" },
@@ -58,6 +60,7 @@ export const sampleData: IModel[] = [
         Address: "123 Main Street",
         AccessNotes: "Go round the back and knock on the door",
         DeliveryDate: "2023-11-10",
+        SiteAccessTimes: null,
         LineItems: [
           { Product: "Product A", Quantity: "5" },
           { Product: "Product B", Quantity: "2" },
@@ -85,6 +88,7 @@ export const sampleData: IModel[] = [
         Address: "123 Main Street",
         AccessNotes: "Go round the back and knock on the door",
         DeliveryDate: "2023-11-10",
+        SiteAccessTimes: "08:00 - 16:00",
         LineItems: [
           { Product: "Product A", Quantity: "5" },
           { Product: "Product B", Quantity: "2" },
@@ -103,6 +107,7 @@ export const sampleData: IModel[] = [
         Address: "123 Main Street",
         AccessNotes: "Go round the back and knock on the door",
         DeliveryDate: "2023-11-10",
+        SiteAccessTimes: null,
         LineItems: [
           { Product: "Product A", Quantity: "5" },
           { Product: "Product B", Quantity: "2" },

@@ -7,7 +7,8 @@ Can you please send out the following Orders:
     Site: {{SiteName}}
     Address: {{Address}}
     Access: {{AccessNotes}}
-    Delivery date: {{DeliveryDate}}{{#if SiteAccessTimes }} - {{SiteAccessTimes}}{{/if}}
+    Delivery date: {{DeliveryDate}}
+    {{#if SiteAccessTimes }} - {{SiteAccessTimes}}{{/if}}
 
     {{#each LineItems}}
         Product: {{Product}} Quantity: {{Quantity}}

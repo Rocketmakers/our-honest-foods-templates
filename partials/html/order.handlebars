@@ -56,9 +56,16 @@
             </div>
             <div style="font-family: inherit; text-align: inherit">
                 <span style="font-family: &quot;Arial&quot;, sans-serif">
-                    Delivery date: {{DeliveryDate}}{{#if SiteAccessTimes }} - {{SiteAccessTimes}}{{/if}}
+                    Delivery date: {{DeliveryDate}}
                 </span>
             </div>
+            {{#if SiteAccessTimes}}
+            <div style="font-family: inherit; text-align: inherit">
+                <span style="font-family: &quot;Arial&quot;, sans-serif">
+                    {{SiteAccessTimes}}
+                </span>
+            </div>
+            {{/if}}
             <div></div>
             </div>
         </td>
